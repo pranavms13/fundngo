@@ -21,7 +21,7 @@ class NavbarCustom extends Component {
                     <Nav.Link eventKey="disabled" disabled>
                     Disabled
                     </Nav.Link>
-                    <Nav.Link eventKey="link-3">Logout</Nav.Link>
+                    <Nav.Link eventKey="link-3" className= "logout">Logout</Nav.Link>
                 </Nav> 
                 );
     }

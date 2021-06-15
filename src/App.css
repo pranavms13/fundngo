@@ -1,87 +1,85 @@
 @font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy'), 
-        url('./fonts/Gilroy-Medium.ttf') format('truetype'),
-        url('./fonts/Gilroy-Regular.ttf') format('truetype'),
-        url('./fonts/Gilroy-Black.ttf') format('truetype'),
-        url('./fonts/Gilroy-Bold.ttf') format('truetype'),
-        url('./fonts/Gilroy-ExtraBold.ttf') format('truetype'),
-        url('./fonts/Gilroy-Heavy.ttf') format('truetype'),
-        url('./fonts/Gilroy-Light.ttf') format('truetype'),
-        url('./fonts/Gilroy-SemiBold.ttf') format('truetype'),
-        url('./fonts/Gilroy-Thin.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./fonts/Gilroy-Medium.ttf") format("truetype"),
+    url("./fonts/Gilroy-Regular.ttf") format("truetype"),
+    url("./fonts/Gilroy-Black.ttf") format("truetype"),
+    url("./fonts/Gilroy-Bold.ttf") format("truetype"),
+    url("./fonts/Gilroy-ExtraBold.ttf") format("truetype"),
+    url("./fonts/Gilroy-Heavy.ttf") format("truetype"),
+    url("./fonts/Gilroy-Light.ttf") format("truetype"),
+    url("./fonts/Gilroy-SemiBold.ttf") format("truetype"),
+    url("./fonts/Gilroy-Thin.ttf") format("truetype");
 }
 
-a{
-  color: #354F52;
+a {
+  color: #354f52;
 }
 
-a:hover{
+a:hover {
   color: #243036;
 }
 
-*{
-  font-family: Gilroy
+* {
+  font-family: Gilroy;
 }
 
 /* -------- Login Page ----------*/
-.App{
+.App {
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 100vh;
-  
 }
 /* ----------------------------- */
 
-.donors{
+.donors {
   width: 405px;
   height: 405px;
 }
 
-.logo-dark{
+.logo-dark {
   width: 525px;
   height: 95px;
   padding-right: 75px;
   margin-left: 50px;
 }
 
-.logo-light{
+.logo-light {
   width: 280px;
   height: 55px;
   margin: 20px;
 }
 
-.login-card{
+.login-card {
   width: 500px;
   height: 400px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.18);
   border-radius: 16px;
   padding: 55px;
   padding-top: 40px;
 }
 
-.login-btn{
+.login-btn {
   width: 100%;
-  background: #2F3E46;
+  background: #2f3e46;
   border-radius: 8px;
   margin-top: 40px;
 }
 
-.login-btn:hover{
+.login-btn:hover {
   background: #243036;
 }
 
-.role-header{
+.role-header {
   width: 100%;
   align-items: center;
   text-align: center;
   height: 100px;
-  background-color: #354F52;
+  background-color: #354f52;
 }
 
-.donor-card{
-  background-color: #CBE896;
+.donor-card {
+  background-color: #cbe896;
   box-shadow: 0px 28px 44px rgba(47, 62, 70, 0.08);
   border-radius: 19px;
   width: 260px;
@@ -91,8 +89,8 @@ a:hover{
   text-align: center;
 }
 
-.ngo-card{
-  background-color: #CAD2C5;
+.ngo-card {
+  background-color: #cad2c5;
   box-shadow: 0px 28px 44px rgba(47, 62, 70, 0.08);
   border-radius: 19px;
   width: 260px;
@@ -145,28 +143,45 @@ a:hover{
   border-radius: 14px;
 }
 
-.page-headings{
-  font-size: 36px;
-  color: #354F52;
-  line-height: 42px;
-  font-weight: '500';
+.total-donate-card {
+  width: 1030px;
+  height: 321px;
+  padding: 35px;
+  box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
+  border-radius: 12px;
 }
 
-.page-subheadings{
-  color: #CAD2C5;
+.about-us-card {
+  text-align: center;
+  width: 461px;
+  height: 340px;
+  background: #ffffff;
+  box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
+  border-radius: 12px;
+}
+
+.page-headings {
+  font-size: 36px;
+  color: #354f52;
+  line-height: 42px;
+  font-weight: "500";
+}
+
+.page-subheadings {
+  color: #cad2c5;
   font-size: 18px;
   padding-top: 10px;
   font-weight: 100;
 }
 
-.donor-name{
+.donor-name {
   font-size: 24px;
   line-height: 28px;
   display: flex;
   align-items: center;
   text-align: right;
   padding-right: 20px;
-  color: #354F52;
+  color: #354f52;
 }
 
 .donor-balance-card {
@@ -176,21 +191,29 @@ a:hover{
   box-shadow: 0px 4px 24px rgba(192, 192, 192, 0.25);
   border-radius: 12px;
   text-align: center;
-  color: #354F52;
+  color: #354f52;
   padding: 15px;
 }
 
-.add-tokens{
+.add-tokens {
   font-family: inherit;
-  color: #354F52;
+  color: #354f52;
   border-style: none;
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 12px;
   width: 250px;
   height: 55px;
 }
 
-.add-tokens:hover{
-  background: #354F52;
+.add-tokens:hover {
+  background: #354f52;
   color: #eeeeee;
+}
+
+.logout {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0px;
+  padding: 53px;
 }
