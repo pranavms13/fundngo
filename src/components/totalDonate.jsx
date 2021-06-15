@@ -28,6 +28,12 @@ class totalDonatePage extends Component {
                         <h4>400</h4>
                         <p>tokens</p>
                     </div>
+
+                    <div className="total-donate-card" style={{background: '#2F3E46', width:'230px', height:'220px', marginLeft:'25px'}}>
+                        <p>365/500
+                            Tokens
+                        </p>
+                    </div>
                 </div>
                         
                 

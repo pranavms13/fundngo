@@ -11,9 +11,9 @@ class DonorBalanceCard extends Component {
     }
     state = {  }
     async componentDidMount(){
-        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        const account = accounts[0];
-        this.setState({wallet: account});
+        // const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        // const account = accounts[0];
+        // this.setState({wallet: account});
         
     }
     render() { 
