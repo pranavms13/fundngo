@@ -6,7 +6,8 @@ import MainPage from './pages/main';
 
 import DonorWalletPage from './pages/donorwallet';
 import TotalDonate from './components/totalDonate';
-
+import DonationCard from './components/donationCard';
+import DashWelcomeCard from './components/dashWelcomeCard';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -15,7 +16,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <MainPage/>
+      <DashWelcomeCard/>
     </div>
   );
 }

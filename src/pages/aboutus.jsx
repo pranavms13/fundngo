@@ -13,11 +13,6 @@ class AboutUsPage extends Component {
                         <div className="page-headings"><h2><b>BYTE ME</b></h2></div>
                         <div className="page-subheadings">If we were in the Valorant Protocol.</div>
                     </Col>
-                    <Col xs={3}>
-                        <div className="donor-name" >
-                            Donor Name
-                        </div>
-                    </Col>
                 </Row>
                 <Row style={{paddingTop:'15px'}} className="justify-content-center">
                     <Col xs={5}>
