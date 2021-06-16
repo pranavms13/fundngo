@@ -4,17 +4,18 @@ import coin from '../images/coin.png';
 
 class DonorBalanceCard extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
-            wallet : ""
+            balance: null
         }
     }
-    state = {  }
     async componentDidMount(){
         // const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         // const account = accounts[0];
         // this.setState({wallet: account});
-        
+        this.setState({
+            balance: this.props.balance
+        });
     }
     render() { 
         return (
@@ -23,11 +24,11 @@ class DonorBalanceCard extends Component {
                 <div style={{ display: 'flex' , marginLeft: '20px', marginTop: '20px'}}>
                     <img src={coin} style={{ width: '76px', height: '76px' }} alt="COIN"/>
                     <div style={{ fontWeight: 'bold', fontSize: '30px' , paddingLeft: '15px', paddingTop: '20px'}}>
-                        <b>10000</b> <font style={{fontSize: '15px'}}>TOKENS</font>
+                        <b>{this.state.balance===0?"0.00":this.state.balance}</b> <font style={{fontSize: '15px'}}>ETH</font>
                     </div>
                 </div>
                 <div style={{marginTop: '25px'}}>
-                    <Button className="add-tokens">ADD TOKENS</Button>
+                    <Button className="add-tokens">ADD ETH</Button>
                 </div>
             </div>
         );

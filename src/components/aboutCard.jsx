@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
-class AboutCardPage extends Component {
+class AboutCard extends Component {
     state = {  }
     render() { 
         return ( 
@@ -16,4 +16,4 @@ class AboutCardPage extends Component {
     }
 }
  
-export default AboutCardPage;
+export default AboutCard;

@@ -23,10 +23,32 @@ a:hover {
   font-family: Gilroy;
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 15px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #354F52; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #D4DFD6; 
+}
+
 /* -------- Login Page ----------*/
 .App {
   align-items: center;
-  background-color: #ffffff;
+  background-color: #E5E5E5;
   height: 100vh;
 }
 /* ----------------------------- */
@@ -111,14 +133,16 @@ a:hover {
 }
 
 .my-nav {
-  position: absolute;
-  width: 260px;
+  position: fixed;
+  width: 270px;
   height: 100%;
   left: 0px;
   top: 0px;
   padding: 35px;
   padding-top: 20px;
   background: #354f52;
+  letter-spacing: 1px;
+  /* font-weight: bold; */
 }
 
 .my-nav a {
@@ -137,18 +161,32 @@ a:hover {
 }
 
 .dsc-date {
-  height: 22px;
+  height: 32px;
+  padding: 5px;
+  width: 170px;
   margin: 10px;
-  background: #eeeeee;
+  background: #cad2c5;
   border-radius: 14px;
+  text-align: center;
 }
 
 .total-donate-card {
-  width: 1030px;
-  height: 321px;
+  width: 1400px;
+  height: 280px;
   padding: 35px;
   box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
   border-radius: 12px;
+  margin: 25px;
+}
+
+.fund-token-card{
+  width: 220px;
+  height: 200px;
+  text-align: center;
+  border-radius: 9px;
+  margin: 10px;
+  padding: 15px;
+  padding-top: 20px;
 }
 
 .about-us-card {
@@ -168,10 +206,15 @@ a:hover {
 }
 
 .page-subheadings {
-  color: #cad2c5;
+  color: #b2bdab;
   font-size: 18px;
   padding-top: 10px;
   font-weight: 100;
+  letter-spacing: 0.05rem;
+}
+
+.wallet-address:hover{
+  text-decoration: underline;
 }
 
 .donor-name {
@@ -216,4 +259,18 @@ a:hover {
   bottom: 0;
   left: 0px;
   padding: 53px;
+  color: '#ffffff'
+}
+
+.txrow{
+  /* display: 'flex'; */
+  white-space: 'nowrap';
+  width: 1200px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 9px;
+  margin: 28px;
+  margin-left: 0px;
+  padding: 10px;
+  padding-left: 25px;
 }
