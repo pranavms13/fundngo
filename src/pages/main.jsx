@@ -5,6 +5,7 @@ import NavbarCustom from '../components/nav';
 import DonorTrackingDonationPage from './donorTracking';
 import DonorWalletPage from './donorwallet';
 import AboutUsPage from './aboutus';
+import DonorDashboard from './dashboard';
 
 // Pages
 // 0 - Dashboard
@@ -27,6 +28,7 @@ class MainPage extends Component {
         return (
             <div style={{display : 'flex'}}>
                 <NavbarCustom pageactive={this.state.pageactive} onPageSelect={this.onPageSelect}/>
+                {this.state.pageactive===0 && <DonorDashboard/>}
                 {this.state.pageactive===1 && <DonorTrackingDonationPage/>}
                 {this.state.pageactive===2 && <DonorWalletPage/>}
                 {this.state.pageactive===3 && <AboutUsPage/>}

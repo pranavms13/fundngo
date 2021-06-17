@@ -16,7 +16,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <DashWelcomeCard/>
+      <MainPage/>
     </div>
   );
 }

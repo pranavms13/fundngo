@@ -157,25 +157,29 @@ a:hover {
   padding: 35px;
   box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
   border-radius: 12px;
+  margin: 30px;
+  margin-right: 30px;
 }
 
 .dsc-date {
-  height: 32px;
+  height: 30px;
   padding: 5px;
-  width: 170px;
+  width: 125px;
   margin: 10px;
+  font-size: 12px;
   background: #cad2c5;
   border-radius: 14px;
   text-align: center;
 }
 
 .total-donate-card {
-  width: 1400px;
+  width: 90%;
   height: 280px;
   padding: 35px;
   box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
   border-radius: 12px;
   margin: 25px;
+  background: #ffffff;
 }
 
 .fund-token-card {
@@ -219,11 +223,13 @@ a:hover {
 .donor-name {
   font-size: 24px;
   line-height: 28px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   text-align: right;
   padding-right: 20px;
   color: #354f52;
+  /* float: 'right'; */
+  /* right: '25px'; */
 }
 
 .donor-balance-card {
@@ -288,4 +294,39 @@ a:hover {
   background: #354f52;
   border-radius: 5px;
   width: 200px;
+}
+
+.donate-now-btn {
+  background: #2f3e46;
+  border-color: #2f3e46;
+}
+
+.donate-now-btn:hover {
+  background: #ffffff;
+  color: #2f3e46;
+  border-color: #2f3e46;
+}
+
+.donate-now-btn:focus{
+  background: #ffffff;
+  color: #2f3e46;
+  border-color: #2f3e46;
+}
+
+.searchbar[type=text] {
+  width: 300px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  height: 40px;
+  padding: 5px;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  border-radius: 9px;
+  border-style: none;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.searchbar[type=text]:focus {
+  width: 65%;
+  border-style: none;
 }

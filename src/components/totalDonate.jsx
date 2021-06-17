@@ -10,7 +10,7 @@ class TotalDonate extends Component {
             
                 
                 <div className="total-donate-card" style={{display:'flex'}}>
-                    <div style={{ width: '900px' }}>
+                    <div style={{ width: '80%' }}>
                         <div style={{ display: 'flex' }}>
                             <div className="page-headings" style={{ fontSize: '25px' }}>Food Donation</div>
                             <div className="dsc-date">

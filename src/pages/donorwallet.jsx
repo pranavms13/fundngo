@@ -42,23 +42,20 @@ class DonorWalletPage extends Component {
     }
     render() { 
         return (
-            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>         
-                <Row>
-                    <Col xs={10}>
-                        <div>
+            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>
+                <div>
+                    <div style={{ clear: 'both', display: 'flex' }}>
+                        <div style={{ width: '85%' }}>
                             <div className="page-headings"><b>My Wallet</b></div>
                             <div className="page-subheadings">Fill all the details to donate funds. All fields must be filled compulsarily</div>
                         </div>
-                    </Col>
-                    <Col xs={2}>
-                        <div style={{paddingTop: '25px', display: 'flex'}}>
-                            <div className="donor-name">
-                                Donor Name
-                            </div>
-                            <img src={usericon} style={{ height: '36px', width: '36px'}} alt="User"/>
+                        <div className="donor-name" style={{ float:'right' }}>
+                            Donor Name
+                            <img src={usericon} style={{ height: '36px', width: '36px', float: 'right', marginLeft: '10px'}} alt="User"/>
                         </div>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
+                
                 <Row style={{paddingTop: '20px'}}>
                     <Col xs={4}>
                         <div style={{display: 'flex', paddingBottom: '15px'}}>
@@ -85,7 +82,7 @@ class DonorWalletPage extends Component {
                         <div className="page-subheadings">
                             Wallet Address
                         </div>
-                        <div className="wallet-address" style={{fontSize: '18px', letterSpacing: '1px', marginTop:'5px'}}><b>
+                        <div className="wallet-address" style={{fontSize: '18px', letterSpacing: '1px', marginTop:'0px'}}><b>
                             {this.state.walletaddress===null ? "none" : this.state.walletaddress}
                         </b></div>
                         <small style={{ color: '#AA794F' }}>Click address to copy</small>
@@ -94,11 +91,11 @@ class DonorWalletPage extends Component {
                 </Row>
                 <Row style={{marginTop: '15px'}}>
                     <Col xs={12}>
-                        <div className="page-subheadings">Transaction History</div>
+                        <div className="page-subheadings" style={{ color: '#354f52' }}>Transaction History</div>
                     </Col>
                 </Row>
-                <Row style={{ marginTop: '25px',  }}>
-                    <Col xs={10} style={{ maxHeight: '350px' }}>
+                <Row style={{ marginTop: '5px',  }}>
+                    <Col xs={10} style={{ maxHeight: '380px' }}>
                         <div style={{ overflowY: 'auto' , height: '100%', letterSpacing: '1px'}}>
                             <TxRow/>
                             <TxRow/>

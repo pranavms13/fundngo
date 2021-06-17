@@ -5,8 +5,8 @@ class DashWelcomeCard extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
-                <img src={welcomeCard}></img>
+            <div style={{marginTop: '15px'}}>
+                <img src={welcomeCard} style={{ width: '90%' }} alt="Donor"/>
             </div>
         );
     }
