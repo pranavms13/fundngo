@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Web3 from 'web3';
 
-import DonorBalanceCard from '../components/donorbalance';
-// import NavbarCustom from '../components/nav';
-import TxRow from '../components/transaction';
+import DonorBalanceCard from '../donorcomponents/donorbalance';
+// import NavbarCustom from '../donorcomponents/nav';
+import TxRow from '../donorcomponents/transaction';
 
 import usericon from '../images/user.png';
 import exclamation from '../images/exclamation.png';
@@ -76,7 +76,7 @@ class DonorWalletPage extends Component {
                                 disabled: this.state.connected
                             }} 
                             onClick={this.connectWallet}>
-                                {!this.state.connected ? "Connect to MetaMask":<><span style={{ color: '#CBE896' }}>&#x1f534;&#xfe0e; </span> Connected !</>}
+                                {!this.state.connected ? "Connect to MetaMask":<div><span style={{ color: '#CBE896' }}>&#x1f534;&#xfe0e; </span> Connected !</div>}
                             </Button>
 
                         <div className="page-subheadings">

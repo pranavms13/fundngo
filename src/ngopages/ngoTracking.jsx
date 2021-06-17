@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import NavbarCustom from '../donorcomponents/nav';
-import TotalDonate from '../donorcomponents/totalDonate';
+import TotalDonate from '../ngocomponents/ngoTrackDonate';
 
 import usericon from '../images/user.png';
 
-class DonorTrackingDonationPage extends Component {
+class NgoTrackingDonationPage extends Component {
     state = {  }
     render() { 
         return ( 
@@ -17,14 +17,14 @@ class DonorTrackingDonationPage extends Component {
                             <div className="page-subheadings">Keep track of all your donations and how many tokens you have raised for each cause.</div>
                         </div>
                         <div className="donor-name" style={{ float:'right' }}>
-                            Donor Name
+                            NGO Name
                             <img src={usericon} style={{ height: '36px', width: '36px', float: 'right', marginLeft: '10px'}} alt="User"/>
                         </div>
                     </div>
                 </div>
                 <Row>
                     <Col xs={12}>
-                        <div>
+                        <div style={{maxHeight:'400px', overflowY:'auto'}}>
                             <TotalDonate/>
                             <TotalDonate/>
                             <TotalDonate/>
@@ -40,4 +40,4 @@ class DonorTrackingDonationPage extends Component {
     }
 }
  
-export  default DonorTrackingDonationPage;
+export  default NgoTrackingDonationPage;
