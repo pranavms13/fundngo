@@ -199,6 +199,7 @@ a:hover {
   background: #ffffff;
   box-shadow: 0px 12px 45px rgba(47, 62, 70, 0.08);
   border-radius: 12px;
+  padding: 30px;
 }
 
 .page-headings {
@@ -307,13 +308,13 @@ a:hover {
   border-color: #2f3e46;
 }
 
-.donate-now-btn:focus{
+.donate-now-btn:focus {
   background: #ffffff;
   color: #2f3e46;
   border-color: #2f3e46;
 }
 
-.searchbar[type=text] {
+.searchbar[type="text"] {
   width: 300px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
@@ -326,7 +327,11 @@ a:hover {
 }
 
 /* When the input field gets focus, change its width to 100% */
-.searchbar[type=text]:focus {
+.searchbar[type="text"]:focus {
   width: 65%;
   border-style: none;
+}
+
+.ngo-create-scheme {
+  width: 500px;
 }

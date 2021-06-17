@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavbarCustom from '../components/nav';
+import NavbarCustom from '../donorcomponents/nav';
 
 
 import DonorTrackingDonationPage from './donorTracking';

@@ -1,13 +1,16 @@
 // import logo from './logo.svg';
-import LoginPage from './pages/login';
-import RolePage from './pages/roles';
+import React, { Component }  from 'react';
+import LoginPage from './donorpages/login';
+import RolePage from './donorpages/roles';
 
-import MainPage from './pages/main';
+import MainPage from './donorpages/main';
 
-import DonorWalletPage from './pages/donorwallet';
-import TotalDonate from './components/totalDonate';
-import DonationCard from './components/donationCard';
-import DashWelcomeCard from './components/dashWelcomeCard';
+import DonorWalletPage from './donorpages/donorwallet';
+import TotalDonate from './donorcomponents/totalDonate';
+import DonationCard from './donorcomponents/donationCard';
+import DashWelcomeCard from './donorcomponents/dashWelcomeCard';
+import NgoDashboard from './ngopages/ngoDashboard';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';

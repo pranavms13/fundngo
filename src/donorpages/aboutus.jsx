@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import AboutCard from '../components/aboutCard';
+import AboutCard from '../donorcomponents/aboutCard';
 
 class AboutUsPage extends Component {
     state = {  }
