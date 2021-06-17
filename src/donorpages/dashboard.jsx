@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-import DashWelcomeCard from '../components/dashWelcomeCard';
-import DonateScheme from '../components/donateScheme';
+import DashWelcomeCard from '../donorcomponents/dashWelcomeCard';
+import DonateScheme from '../donorcomponents/donateScheme';
 
 import usericon from '../images/user.png';
 
