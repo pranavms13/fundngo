@@ -45,11 +45,11 @@ class DonorWalletPage extends Component {
             <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>
                 <div>
                     <div style={{ clear: 'both', display: 'flex' }}>
-                        <div style={{ width: '85%' }}>
+                        <div style={{ width: '75%' }}>
                             <div className="page-headings"><b>My Wallet</b></div>
-                            <div className="page-subheadings">Fill all the details to donate funds. All fields must be filled compulsarily</div>
+                            <div className="page-subheadings">Fill all the details to donate funds. All fields must be filled compulsorily</div>
                         </div>
-                        <div className="donor-name" style={{ float:'right' }}>
+                        <div className="donor-name" style={{ float:'right'}}>
                             Donor Name
                             <img src={usericon} style={{ height: '36px', width: '36px', float: 'right', marginLeft: '10px'}} alt="User"/>
                         </div>
