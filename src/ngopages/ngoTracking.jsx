@@ -9,10 +9,10 @@ class NgoTrackingDonationPage extends Component {
     state = {  }
     render() { 
         return ( 
-            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>
+            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px', width: '80%'}}>
                 <div>
                     <div style={{ clear: 'both', display: 'flex' }}>
-                        <div style={{ width: '85%' }}>
+                        <div style={{ width: '80%' }}>
                             <div className="page-headings"><b>Tracking Donations</b></div>
                             <div className="page-subheadings">Keep track of all your donations and how many tokens you have raised for each cause.</div>
                         </div>
@@ -24,7 +24,7 @@ class NgoTrackingDonationPage extends Component {
                 </div>
                 <Row>
                     <Col xs={12}>
-                        <div style={{maxHeight:'400px', overflowY:'auto'}}>
+                        <div style={{maxHeight:'600px', overflowY:'auto'}}>
                             <TotalDonate/>
                             <TotalDonate/>
                             <TotalDonate/>

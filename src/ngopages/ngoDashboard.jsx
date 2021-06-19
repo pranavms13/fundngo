@@ -9,11 +9,11 @@ import usericon from '../images/user.png';
 class NgoDashboard extends Component {
     render() { 
         return (
-            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>
+            <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px', width: '80%'}}>
                 <div style={{ marginLeft: '15px' }}>
                     <input type="text" name="search" className="searchbar" placeholder="Search"/>
                     <div className="donor-name" style={{ float:'right' }}>
-                        Donor Name
+                        NGO Name
                         <img src={usericon} style={{ height: '36px', width: '36px', float: 'right', marginLeft: '10px'}} alt="User"/>
                     </div>
                     

@@ -1,0 +1,30 @@
+[
+    {
+        "image":"https://cdn.discordapp.com/attachments/851493797530697751/855784809485828096/priyanka.png",
+        "name":"Priyanka Prashanth Kumar",
+        "character":"SAGE",
+        "description":"She is our bubbly User Experience Designer. Her research abilities are so strong, we already know everything about you judges ;) She may overthink, but hey, who do you think applied their brains for our Web App!?",
+        "quote":"My purpose is my gift. Be not afraid to accept it"
+    },
+    {
+        "image":"https://cdn.discordapp.com/attachments/851493797530697751/855775275827986462/macha.jpg",
+        "name":"Pranav M S",
+        "character":"SOVA",
+        "description":"He is none other than our intel, our Back End Developer. Don’t be decieved by his silence because he will destroy you in a coding stand-off. Beware of him because there is no coding challenge he will not take on!",
+        "quote":"I was told you are all the best. That is why I’m here"
+    },
+    {
+        "image":"https://cdn.discordapp.com/attachments/851493797530697751/855775275031461908/Sriram.jpeg",
+        "name":"Sriram Venkatesh",
+        "character":"PHEONIX",
+        "description":"He is our dynamic Front End Developer. Ladies, he is more than just looks! Apart from the added charisma he delivers top tier front end experience. You could say he is a complete package.",
+        "quote":"Easy mate, there can be only one hero"
+    },
+    {
+        "image":"https://cdn.discordapp.com/attachments/851493797530697751/855775326109302784/temp_photo.jpg",
+        "name":"Raksha S",
+        "character":"VIPER",
+        "description":"She is our killer UI Designer. She designs faster than she talks. The developers fear that her design details will someday be the death of them. She’s soo OCD and we’re totally here for it!",
+        "quote":"They call me a monster. Shall I prove them right?"
+    }
+]
