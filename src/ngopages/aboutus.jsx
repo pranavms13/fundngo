@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import AboutCard from '../donorcomponents/aboutCard';
+import AboutCard from '../ngocomponents/aboutCard';
 import aboutjson from '../aboutus.json';
 
 class AboutUsPage extends Component {
