@@ -5,11 +5,11 @@ class DonationCard extends Component {
     state = {  }
     render() { 
         return ( 
-            <div className="donations-card">
+            <div className="donations-card" style={{height: '600px'}}>
                 <div>
-                    <Button>Back</Button>
-                    <Button style={{float:'right'}}>Share</Button>
-                    <Button style={{float:'right'}}>Report</Button>
+                    <Button style={{background: '#F1F1F2', color: '#354F52', borderStyle: 'none'}}>Back</Button>
+                    <Button style={{float:'right', background: '#F1F1F2', color: '#354F52', borderStyle: 'none', marginLeft: '10px'}}>Share</Button>
+                    <Button style={{float:'right', background: '#F1F1F2', color: '#354F52', borderStyle: 'none'}}>Report</Button>
                 </div>
                 <div>
                     <div style={{marginTop:'30px'}}>

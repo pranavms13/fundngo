@@ -17,6 +17,7 @@ import DonorWalletPage from './donorpages/donorwallet';
 import TotalDonate from './donorcomponents/totalDonate';
 import DonationCard from './donorcomponents/donationCard';
 import DashWelcomeCard from './donorcomponents/dashWelcomeCard';
+import DonationCardPage from './donorpages/donationCardPage';
 import DonorTrackingDonationPage from './donorpages/donorTracking';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,6 +28,11 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   return (
+<<<<<<< HEAD
+    <div className="App">
+      <DonationCardPage/>
+    </div>
+=======
     <LoadingScreen
               loading={loading}
               bgColor='#f1f1f1'
@@ -56,6 +62,7 @@ function App() {
           </Router>
       </div>
     </LoadingScreen>
+>>>>>>> c9cf7200dd3013e195c1942b38cad8674b42cb1b
   );
 }
 
