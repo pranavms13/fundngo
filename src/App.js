@@ -10,6 +10,7 @@ import DonorWalletPage from './donorpages/donorwallet';
 import TotalDonate from './donorcomponents/totalDonate';
 import DonationCard from './donorcomponents/donationCard';
 import DashWelcomeCard from './donorcomponents/dashWelcomeCard';
+import DonationCardPage from './donorpages/donationCardPage';
 import DonorTrackingDonationPage from './donorpages/donorTracking';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +19,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <NgoMainPage/>
+      <DonationCardPage/>
     </div>
   );
 }
