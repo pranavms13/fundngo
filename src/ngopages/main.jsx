@@ -6,12 +6,15 @@ import NgoTrackingDonationPage from './ngoTracking';
 import NgoWalletPage from './ngowallet';
 import AboutUsPage from './aboutus';
 import NgoDashboard from './ngoDashboard';
+import Purchase from './purchase'
+import CreateScheme from './createDonate'
 
 // Pages
 // 0 - Dashboard
 // 1 - Track Donations
 // 2 - Wallet
-// 3 - About Us
+// 3 - Purchase
+// 4 - About us
 
 class NgoMainPage extends Component {
     constructor(props){
@@ -29,9 +32,11 @@ class NgoMainPage extends Component {
             <div style={{display : 'flex'}}>
                 <NavbarCustom pageactive={this.state.pageactive} onPageSelect={this.onPageSelect}/>
                 {this.state.pageactive===0 && <NgoDashboard/>}
-                {this.state.pageactive===1 && <NgoTrackingDonationPage/>}
-                {this.state.pageactive===2 && <NgoWalletPage/>}
-                {this.state.pageactive===3 && <AboutUsPage/>}
+                {this.state.pageactive===1 && <CreateScheme/>}
+                {this.state.pageactive===2 && <NgoTrackingDonationPage/>}
+                {this.state.pageactive===3 && <NgoWalletPage/>}
+                {this.state.pageactive===4 && <Purchase/>}
+                {this.state.pageactive===5 && <AboutUsPage/>}
             </div>
         );
     }
