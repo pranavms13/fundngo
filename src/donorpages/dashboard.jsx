@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import DashWelcomeCard from '../donorcomponents/dashWelcomeCard';
@@ -7,13 +8,25 @@ import DonateScheme from '../donorcomponents/donateScheme';
 import usericon from '../images/user.png';
 
 class DonorDashboard extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            user: ""
+        }
+    }
+    async componentWillMount(){
+        this.setState({
+            user: JSON.parse(window.localStorage.getItem('fundngo'))
+        })
+        // axios.post("http://localhost:4000/donor/getschemes")
+    }
     render() { 
         return (
             <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px'}}>
                 <div style={{ marginLeft: '15px' }}>
                     <input type="text" name="search" className="searchbar" placeholder="Search"/>
                     <div className="donor-name" style={{ float:'right' }}>
-                        Donor Name
+                        {this.state.user.name}
                         <img src={usericon} style={{ height: '36px', width: '36px', float: 'right', marginLeft: '10px'}} alt="User"/>
                     </div>
                     
@@ -32,23 +45,20 @@ class DonorDashboard extends Component {
                 </Row>
                 <Row>
                     <Col xs={8}>
-                        <div style={{ maxHeight: '400px', overflowX: 'auto' }}>
-                            <div style={{ display: 'flex', maxWidth: '100%', overflowX: 'auto' }}>
+                        <div style={{ maxHeight: '400px', overflowX: 'auto', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
+                        
                                 <DonateScheme/>
                                 <DonateScheme/>
-                            </div>
-                            <div style={{ display: 'flex', maxWidth: '100%', overflowX: 'auto' }}>
+                        
                                 <DonateScheme/>
                                 <DonateScheme/>
-                            </div>
-                            <div style={{ display: 'flex', maxWidth: '100%', overflowX: 'auto' }}>
+                        
                                 <DonateScheme/>
                                 <DonateScheme/>
-                            </div>
-                            <div style={{ display: 'flex', maxWidth: '100%', overflowX: 'auto' }}>
+                        
                                 <DonateScheme/>
                                 <DonateScheme/>
-                            </div>
+                        
                         </div>
                     </Col>
                     <Col xs={4}>

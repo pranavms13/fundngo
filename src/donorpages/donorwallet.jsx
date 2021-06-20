@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Web3 from 'web3';
 
+import ABI from '../FundNGO.json';
+import config from '../config.json';
+
 import DonorBalanceCard from '../donorcomponents/donorbalance';
 // import NavbarCustom from '../donorcomponents/nav';
 import TxRow from '../donorcomponents/transaction';
 
 import usericon from '../images/user.png';
 import exclamation from '../images/exclamation.png';
+import axios from 'axios';
+
 
 class DonorWalletPage extends Component {
     constructor(props){
@@ -15,30 +20,53 @@ class DonorWalletPage extends Component {
         this.state = {
             walletaddress: null,
             walletbalance: 0,
-            connected : false
+            connected : false,
+            user: ""
         }
         // this.web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
         this.web3 = null;
         this.connectWallet = this.connectWallet.bind(this);
+        this.addbalance = this.addbalance.bind(this);
     }
-    async componentDidMount(){
-        await window.ethereum.send('eth_requestAccounts');
-        this.web3 = new Web3(window.ethereum);
+    async componentWillMount(){
+        if (typeof window.ethereum === 'undefined' || (typeof window.web3 === 'undefined')) {
+            alert("Please install Metamask to use FundNGO")
+            window.open("https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",'_blank')
+        }else{
+            await window.ethereum.send('eth_requestAccounts');
+            this.web3 = new Web3(window.ethereum);
+            this.setState({
+                user: JSON.parse(window.localStorage.getItem('fundngo'))
+            })
+        }
     }
     async connectWallet(){
         let address = await this.web3.eth.getAccounts();
         console.log(address);
         // eslint-disable-next-line no-undef
         let bal = await this.web3.eth.getBalance(address[0])/Math.pow(10,18);
+        let fndaccount = new this.web3.eth.Contract(ABI.abi,"0xF632f317d9c9D6F14Be734d1e9b0e8f3678160BB")
+        console.log(fndaccount)
+        let fndbal = await fndaccount.methods.balanceOf(address[0]).call();
+        console.log(fndbal)
         this.setState({
             walletaddress: address[0],
-            walletbalance: bal,
+            walletbalance: fndbal/Math.pow(10,18),
             connected: true
         })
         console.log(bal);
     }
     async loadtxns(){
         
+    }
+    addbalance(){
+        axios.post("http://localhost:4000/donor/addtokens",{
+            email: this.state.user.email,
+            amount: 100,
+            wallet: this.state.walletaddress
+        }).then(result => {
+            alert(`Added 100 FND`)
+        })
     }
     render() { 
         return (
@@ -63,9 +91,9 @@ class DonorWalletPage extends Component {
                             <div style={{ color: '#AA794F', paddingLeft: '5px', paddingTop: '1px', letterSpacing: '0.05rem' }}>ETH cannot be converted back to INR</div>
                         </div>
                         {this.state.walletbalance===0 && 
-                            <DonorBalanceCard balance={this.state.walletbalance}/>
+                            <DonorBalanceCard balance={this.state.walletbalance} addbalance={this.addbalance}/>
                         }{this.state.walletbalance>0 && 
-                            <DonorBalanceCard balance={this.state.walletbalance}/>
+                            <DonorBalanceCard balance={this.state.walletbalance} addbalance={this.addbalance}/>
                         }
                     </Col>
                     <Col xs={8} style={{padding: '25px', paddingTop: '50px'}}>

@@ -6,11 +6,10 @@ class NgoDonateScheme extends Component {
     render() { 
         return ( 
             <div className="donate-scheme-card">
-                <h4><b>Food Donation</b></h4>
-                <div className="dsc-date">📅 12th May, 2021</div>
+                <h4><b>{this.props.name}</b></h4>
+                <div className="dsc-date">📅 {this.props.date}</div>
                 <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend quam leo, eget at. 
-                    A consectetur hendrerit est magna non molestie sit condimentum. Quam odio neque.</p>
+                <p>{this.props.desc}</p>
                 </div>
             </div>
          );
