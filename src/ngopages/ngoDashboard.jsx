@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import DashWelcomeCard from '../ngocomponents/dashWelcomeCard';
 import DonateScheme from '../ngocomponents/ngoDonateScheme';
-
+import CreateButton from '../images/create-btn.png'
 import usericon from '../images/user.png';
 
 class NgoDashboard extends Component {
@@ -20,8 +20,14 @@ class NgoDashboard extends Component {
                 </div>
 
                 <Row>
-                    <Col xs={12}>
+                    <Col xs={9}>
                         <DashWelcomeCard/>
+                    </Col>
+                    <Col xs={3}>
+                        <div style={{marginTop: '68px', float: 'center'}}>
+                            <img src={CreateButton} style={{maxWidth: '72%'}}/>
+                        </div>
+                        
                     </Col>
                 </Row>
                 <Row>

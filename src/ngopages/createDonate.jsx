@@ -60,7 +60,7 @@ class CreateDonation extends Component {
                             <div style={{ clear: 'both', display: 'flex', float:'right'}}>
                                 
                                 <div className="donor-name" >
-                                    <span>Donor Name</span>
+                                    <span>NGO Name</span>
                                     <img src={usericon} style={{ height: '36px', width: '36px', marginLeft: '10px'}} alt="User"/>
                                 </div>
                             </div>

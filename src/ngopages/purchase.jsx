@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Button, Modal, Dropdown, DropdownButton } from 'react-bootstrap';
 
 import PurchaseCard from '../ngocomponents/purchaseCard';
 import usericon from '../images/user.png';
@@ -35,12 +35,28 @@ class Purchase extends Component {
                     </div>
                 </div>
 
-                <Row>
+                <Row style={{marginTop: '10px'}}>
                     <Col>
                         <div style={{width:'85%'}}>
-                            <Button onClick={() => {this.setState({show: !this.state.show})}} className="donation-card-button" style={{float:'right'}}>Go to Purchase</Button>  
+                            <Dropdown> 
+                                <Dropdown.Toggle variant="success" id="dropdown-basic" style={{textAlign: 'left',width: '90%',background: '#FFFFFF', borderStyle: 'none', color: '#354F52'}}>
+                                    Dropdown Button
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu style={{float: 'right'}}>
+                                    <Dropdown.Item href="#/action-1">Food donation</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Oxygen Cylinder</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Clothes Donation</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                             
                         </div>
                         
+                    </Col>
+                    <Col>
+                        <div style={{width:'85%'}}>
+                            <Button onClick={() => {this.setState({show: !this.state.show})}} className="donation-card-button" style={{float:'right'}}>Go to Purchase</Button> 
+                        </div>
                     </Col>
                 </Row>
                 
