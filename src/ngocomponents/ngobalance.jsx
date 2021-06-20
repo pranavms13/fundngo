@@ -24,7 +24,7 @@ class DonorBalanceCard extends Component {
                 <div style={{ display: 'flex' , marginLeft: '20px', marginTop: '20px'}}>
                     <img src={coin} style={{ width: '76px', height: '76px' }} alt="COIN"/>
                     <div style={{ fontWeight: 'bold', fontSize: '30px' , paddingLeft: '15px', paddingTop: '20px'}}>
-                        <b>{this.state.balance===0?"0.00":this.state.balance}</b> <font style={{fontSize: '15px'}}>ETH</font>
+                        <b>{this.state.balance===0?"0.00":this.state.balance}</b> <font style={{fontSize: '15px'}}>FND</font>
                     </div>
                 </div>
                 <div style={{marginTop: '25px'}}>

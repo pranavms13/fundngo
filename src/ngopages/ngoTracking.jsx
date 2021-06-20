@@ -1,12 +1,44 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
 import NavbarCustom from '../donorcomponents/nav';
-import TotalDonate from '../ngocomponents/ngoTrackDonate';
+import NgoTrackDonate from '../ngocomponents/ngoTrackDonate';
 
 import usericon from '../images/user.png';
 
 class NgoTrackingDonationPage extends Component {
-    state = {  }
+    constructor(props){
+        super(props)
+        this.state = {
+            renderedcards : []
+        }
+    }
+    async componentWillMount(){
+        let user = JSON.parse(window.localStorage.getItem('fundngo'));
+        this.setState({
+            user: JSON.parse(window.localStorage.getItem('fundngo'))
+        })
+        await axios.post("http://localhost:4000/ngo/getschemes",{
+            ngoid: user.ngoid
+        }).then(result => {
+            if(result){
+                this.setState({
+                    dataresults: result.data,
+                    renderedcards: this.rendercards(result.data)
+                })
+            }
+            console.log(result)
+        })
+    }
+    rendercards(data){
+        var retarr = []
+        for(var i = 0; i< data.length; i++){
+            retarr.push(
+                <NgoTrackDonate dono={data[i]}/>
+            )
+        }
+        return retarr;
+    }
     render() { 
         return ( 
             <Container fluid style={{paddingTop: '30px', background: '#E5E5E5', height: '100%', marginLeft: '270px', paddingLeft: '80px', width: '80%'}}>
@@ -25,12 +57,7 @@ class NgoTrackingDonationPage extends Component {
                 <Row>
                     <Col xs={12}>
                         <div style={{maxHeight:'600px', overflowY:'auto'}}>
-                            <TotalDonate/>
-                            <TotalDonate/>
-                            <TotalDonate/>
-                            <TotalDonate/>
-                            <TotalDonate/>
-                            <TotalDonate/>
+                            {this.state.renderedcards}
 
                         </div>
                     </Col>

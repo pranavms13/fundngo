@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Web3 from 'web3';
 
+import ABI from '../FundNGO.json';
 import DonorBalanceCard from '../ngocomponents/ngobalance';
 // import NavbarCustom from '../donorcomponents/nav';
 import TxRow from '../ngocomponents/transaction';
@@ -22,17 +23,26 @@ class DonorWalletPage extends Component {
         this.connectWallet = this.connectWallet.bind(this);
     }
     async componentDidMount(){
-        await window.ethereum.send('eth_requestAccounts');
-        this.web3 = new Web3(window.ethereum);
+        if (typeof window.ethereum === 'undefined' || (typeof window.web3 === 'undefined')) {
+            alert("Please install Metamask to use FundNGO")
+            window.open("https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",'_blank')
+        }else{
+            await window.ethereum.send('eth_requestAccounts');
+            this.web3 = new Web3(window.ethereum);
+        }
     }
     async connectWallet(){
         let address = await this.web3.eth.getAccounts();
         console.log(address);
         // eslint-disable-next-line no-undef
         let bal = await this.web3.eth.getBalance(address[0])/Math.pow(10,18);
+        let fndaccount = new this.web3.eth.Contract(ABI.abi,"0xF632f317d9c9D6F14Be734d1e9b0e8f3678160BB")
+        console.log(fndaccount)
+        let fndbal = await fndaccount.methods.balanceOf(address[0]).call();
+        console.log(fndbal)
         this.setState({
             walletaddress: address[0],
-            walletbalance: bal,
+            walletbalance: fndbal/Math.pow(10,18),
             connected: true
         })
         console.log(bal);
